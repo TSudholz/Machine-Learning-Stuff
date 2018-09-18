@@ -99,11 +99,13 @@
 
 
 \normalsize
-ICECUBE is a large scale neurtino located under the South Pole. The experiment consists of 86 strings of light detecting modules drilled 1.5 to 2.5 km below the surface. This resulted in a an observing volume of approximately 100 km$^2$. ICECUBE has a full sky coverage as can even detect neutrinos that have travelled through the Earth. 
+ICECUBE is a large scale neurtino located under the South Pole. The experiment consists of 86 strings of light detecting modules drilled 1.5 to 2.5 km below the surface. This resulted in a an observing volume of approximately 100 km$^2$. ICECUBE has a full sky coverage as can even detect neutrinos that have travelled through the Earth. Figure \ref{fig:ICECUBE} shows a pictorial layout of ICECUBE and where the detectors are located.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.7\textwidth]{icecube_detector_sm.png}
+\caption{Diagram of the location adn layout of the ICECUBE Experiment.}
+\label{fig:ICECUBE}
 \end{figure}
 
 
@@ -113,23 +115,21 @@ One of the challenges in high energy astrophysics is attributing a source to the
 \end{equation}
 Where i is the neutrino event, j is the source and $S$(i-j) is a function that would describe the probability that an event i is associated with a source j.
 
-The main question that we would like to answer is are there features (lumpiness) in Sky maps that can be attributed to different number of sources. We would would like to differentiate between 100 close and strong sources compared to 1 million far but weak sources. Is there added information about how detected events arrive together and test whether or not detected events are truly independent.
+The main question that we would like to answer is are there features (lumpiness) in Sky maps that can be attributed to different number of sources. A mock example is shown in Figure \ref{fig:SourceEventEx}. We would would like to differentiate between 100 close and strong sources compared to 1 million far but weak sources. Is there added information about how detected events arrive together and test whether or not detected events are truly independent. To classify features, we could use a monopole, dipole and/or higher order functions in both coordinate directions.
 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=0.8\textwidth]{ICECUBE_eventmap.png}
-\caption{All-sky result of the unbinned likelihood maxi-
-mization shown in equatorial coordinates (J2000). Shown is
-the negative logarithm of the pre-trial p-value, − log 10 p, as-
-suming no clustering as null-hypothesis. The Galactic Plane
-is shown as black line. Reference - arXiv:1609.04981
-}
-\end{figure}
 
 \begin{figure}[!h]
 \centering
 \includegraphics[width=0.6\textwidth]{MockNeutrinoMap.png}
 \caption{Diagrammatic example of how sources and arrival directions of neutrinos could be arranged over a sky map. Blue stars represent a neutrino source and red dots represent arrival directions.}
+\label{fig:SourceEventEx}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{MockNeutrinoMap_clumpAndDirection.png}
+\caption{Diagrammatic example of how an event is probability matched to sources. The circles represent possible features that could be classified.}
+\label{fig:SourceEventClump}
 \end{figure}
 
 \end{document}
