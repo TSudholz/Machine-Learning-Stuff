@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt,twoside,openright]{article}
+\documentclass[a4paper,12pt,twoside]{article}
 \usepackage[titletoc]{appendix}
 \usepackage{textcomp}
 \usepackage[pdftex]{color,graphics}
@@ -97,13 +97,26 @@
 \end{center}
 
 \normalsize
-ICECUBE is a large scale neutrino observatory located under the South Pole. The experiment consists of 86 strings of light detecting modules drilled 1.5 to 2.5 km below the surface. This number of strings provides an observing volume of approximately 100 km$^2$. ICECUBE has a full sky coverage due to its ability to detect neutrinos that have travelled through the Earth. Figure \ref{fig:ICECUBE} shows a pictorial layout of ICECUBE and where the detectors are located.
+ICECUBE is a large scale astrophysical neutrino detector located under the South Pole, built to help answer one of Astrophysics long unanswered questions: where do the highest energy cosmic particles come from? We have hypothesise these particles come from active galaxies containing large jets from material being accreted onto a super massive black hole. So far there the highest significance detection has been the neutrino event coinciding with detected gamma-ray events from FERMI satellite and MAGIC telescope (a ground base gamma-ray telescope). 
+
+The ICECUBE detector consists of 86 strings of light detecting modules drilled 1.5 to 2.5 km below the surface. This number of strings provides an observing volume of approximately 100 km$^2$. ICECUBE has a full sky coverage due to its ability to detect neutrinos that have travelled through the Earth. Figure \ref{fig:ICECUBE} shows a pictorial layout of ICECUBE and where the detectors are located.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\textwidth]{icecube_detector_sm.png}
-\caption{Diagram of the location and layout of the ICECUBE Observatory.}
+\begin{subfigure}[b]{0.4\textwidth}
+\includegraphics[width=\textwidth]{particlesFromAGN.jpg}
+%\caption{Diagram of possible particles types seen from an Active Galactic Nuclei (AGN). AN AGN is a galaxy that has matter accreting onto the super massive black at it centre.}
+\caption{}
+\label{fig:AGNpart}
+\end{subfigure}
+~
+\begin{subfigure}[b]{0.45\textwidth}
+\includegraphics[width=\textwidth]{icecube_detector_sm.png}
+%\caption{Diagram of the location and layout of the ICECUBE Observatory.}
+\caption{}
 \label{fig:ICECUBE}
+\end{subfigure}
+\caption{\ref{fig:AGNpart}) Diagram of possible particles types seen from an Active Galactic Nuclei (AGN). AN AGN is a galaxy that has matter accreting onto the super massive black at it centre. \ref{fig:ICECUBE}) Diagram of the location and layout of the ICECUBE Observatory.}
 \end{figure}
 
 
@@ -120,13 +133,20 @@ Our hypothesis is that there could be unique features in the arrival direction S
 We can already generate sky maps from simulations using different numbers of neutrino sources. The simulations use models of our best understandings of galaxy and star formations. After generating the sky maps, we would like to find a way to classify features and this is where we would like to include the machine learning algorithms. Our current thought is a harmonic scan and fit for as high order functions as possible. We are aware one of the challenges will be to have enough simulated data for the training set and the test set. After using the simulated data as a training data set, we can then test our hypothesis using the measured ICECUBE neutrino sky map to see what number range of sources the algorithm determines.
 
 
-%\begin{figure}[!htp]
-%\centering
-%\includegraphics[width=0.6\textwidth]{MockNeutrinoMap.png}
-%\caption{Diagrammatic example of how sources and arrival directions
-%of neutrinos could be arranged over a sky map. Blue stars represent a neutrino source and red dots represent arrival directions.}
-%\label{fig:SourceEventEx}
-%\end{figure}
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.6\textwidth]{MockNeutrinoMap.png}
+\caption{Diagrammatic example of how sources and arrival directions
+of neutrinos could be arranged over a sky map. Blue stars represent a neutrino source and red dots represent arrival directions.}
+\label{fig:SourceEventEx}
+\end{figure}
+
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.6\textwidth]{ICECUBE_eventmap.png}
+\caption{ICECUBE point source probability search sky map. Taken from arXiv:1609.0498.}
+\label{fig:ICECUBE_probMap}
+\end{figure}
 
 
 \end{document}
